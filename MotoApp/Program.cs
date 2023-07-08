@@ -1,23 +1,47 @@
-﻿using MotoApp;
-var stack = new BasicStack<double>();
+﻿using TemperatureChecker.Entities;
+using TemperatureChecker.Repositories;
 
-stack.Push(item: 4.5);
-stack.Push(item: 43);
-stack.Push(item: 333);
-
-var stackString = new BasicStack<string>();
-stackString.Push(item: "Company");
-stackString.Push(item: "Company");
-stackString.Push(item: "Company");
-
-
-double sum = 0.0;
-
-while (stack.Count > 0)
+namespace TemperatureApp
 {
-    double item = stack.Pop();
-    Console.WriteLine($"Item: {item}");
-    sum += item;
-}
+    public class TemperatureChecker
+    {
+        static void Main()
+        {
+            // Tworzenie repozytoriów dla pracowników i managera
+            var employeeRepository = new ListRepository<Employee>();
+            var managerRepository = new ListRepository<Manager>();
 
-Console.WriteLine($"Sum: {sum}");
+            // Dodawanie pracowników
+            employeeRepository.Add(new Employee { FirstName = "Tomasz" });
+            employeeRepository.Add(new Employee { FirstName = "Zuzanna" });
+            employeeRepository.Add(new Employee { FirstName = "Joanna" });
+
+            // Dodawanie managera
+            managerRepository.Add(new Manager { FirstName = "Jan", LastName = "Kowalski" });
+
+            // Przykład weryfikacji pracy przez managera
+            var manager = managerRepository.GetById(1);
+            var employee = employeeRepository.GetById(1);
+
+            if (manager != null && employee != null)
+            {
+                // Wykonaj weryfikację pracy przez managera
+                VerifyWork(manager, employee);
+            }
+            else
+            {
+                Console.WriteLine("Nie znaleziono managera lub pracownika.");
+            }
+        }
+
+        static void VerifyWork(Manager manager, Employee employee)
+        {
+            Console.WriteLine($"Manager: {manager.FirstName} {manager.LastName}");
+            Console.WriteLine($"Pracownik: {employee.FirstName}");
+
+            // Logika weryfikacji pracy przez managera
+
+            Console.WriteLine("Weryfikacja zakończona.");
+        }
+    }
+}
