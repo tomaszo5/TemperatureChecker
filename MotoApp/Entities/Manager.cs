@@ -1,5 +1,5 @@
 ﻿namespace TemperatureChecker.Entities
-{
+ 
     public class Manager : EntityBase
     {
         public string? FirstName { get; set; }

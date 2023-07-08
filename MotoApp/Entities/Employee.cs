@@ -1,4 +1,4 @@
-﻿namespace TemperatureChecker.Entities
+﻿namespace TemperatureChecker.Entities 
 {
     public class Employee : EntityBase
     {

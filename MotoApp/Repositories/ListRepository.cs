@@ -1,7 +1,7 @@
 ﻿namespace TemperatureChecker.Repositories;
 using TemperatureChecker.Entities;
 
-
+ 
 public class ListRepository<T> : IRepository<T> where T : class, IEntity
 
 {

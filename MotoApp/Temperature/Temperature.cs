@@ -1,5 +1,5 @@
 ﻿using TemperatureChecker;
-
+ 
 public class Temperature : IEntity
 {
     public int Id { get; set; }

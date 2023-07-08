@@ -1,7 +1,7 @@
 ﻿using System;
 using TemperatureChecker.Entities;
 using TemperatureChecker.Repositories;
-
+ 
 namespace TemperatureApp
 {
     public class Verifier

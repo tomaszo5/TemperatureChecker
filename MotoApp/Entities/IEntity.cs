@@ -1,4 +1,4 @@
-﻿namespace TemperatureChecker
+﻿namespace TemperatureChecker 
 {
     public interface IEntity
     {

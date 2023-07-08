@@ -2,7 +2,7 @@
 using TemperatureChecker.Repositories;
 
 namespace TemperatureApp
-{
+{ 
     public class TemperatureChecker
     {
         static void Main()

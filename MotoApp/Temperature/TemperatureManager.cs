@@ -2,7 +2,7 @@
 using System.Linq;
 using TemperatureChecker.Entities;
 using TemperatureChecker.Repositories;
-
+ 
 public class TemperatureManager
 {
     private readonly IRepository<Temperature> _temperatureRepository;

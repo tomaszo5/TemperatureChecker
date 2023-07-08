@@ -1,5 +1,5 @@
 ﻿namespace TemperatureChecker;
-
+ 
     public interface IWriteRepository<in T> where T : class, IEntity
 {
     void Add(T item);

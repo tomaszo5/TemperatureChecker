@@ -1,4 +1,4 @@
-﻿using TemperatureChecker.Entities;
+﻿using TemperatureChecker.Entities; 
 
 namespace TemperatureChecker.Entities
 {

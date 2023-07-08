@@ -2,7 +2,7 @@
 using TemperatureChecker.Entities;
 using System.Collections.Generic;
 using System.Linq;
-
+ 
 namespace TemperatureChecker.Repositories
 {
     public class SqlRepository<T> : IRepository<T>, IWriteRepository<T>, IReadRepository<T> where T : class, IEntity, new()
