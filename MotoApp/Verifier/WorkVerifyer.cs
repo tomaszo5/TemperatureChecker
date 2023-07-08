@@ -1,12 +1,6 @@
 ﻿using TemperatureChecker.Entities;
 using TemperatureChecker.Repositories;
-
-public interface IWorkVerifier
-{
-    void VerifyWork();
-}
-
-class WorkVerifier : IWorkVerifier
+public class WorkVerifier
 {
     private readonly IRepository<Employee> _employeeRepository;
     private readonly IRepository<Manager> _managerRepository;
@@ -15,11 +9,6 @@ class WorkVerifier : IWorkVerifier
     {
         _employeeRepository = new ListRepository<Employee>();
         _managerRepository = new ListRepository<Manager>();
-
-        // Dodawanie pracowników
-        _employeeRepository.Add(new Employee { FirstName = "Tomasz" });
-        _employeeRepository.Add(new Employee { FirstName = "Zuzanna" });
-        _employeeRepository.Add(new Employee { FirstName = "Joanna" });
 
         // Dodawanie managera
         _managerRepository.Add(new Manager { FirstName = "Jan", LastName = "Kowalski" });
